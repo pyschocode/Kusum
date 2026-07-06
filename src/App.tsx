@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from './Home';
+import Chatbot from './Chatbot';
+import KusumInfo from './KusumInfo';
+import Feedback from './Feedback';
 
-function App() {
+
+const App: React.FC = () => {
+  const [language, setLanguage] = useState<'hi' | 'en'>('hi');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar language={language} setLanguage={setLanguage} />
+      <Routes>
+        <Route path="/" element={<Home language={language} />} />
+        <Route path="/chat" element={<Chatbot language={language} />} />
+        <Route path="/kusum-info" element={<KusumInfo language={language} />} />
+        <Route path="/feedback" element={<Feedback language={language} />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

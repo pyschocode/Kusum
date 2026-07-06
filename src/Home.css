@@ -1,0 +1,97 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #e6eef5;
+
+  background-image: url('./assets/Bg_image.jpg'); /* ✅ use ./assets, not /assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* keep the rest exactly as you had */
+
+.title-block {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2de611e1;
+  margin-bottom: 0.5rem;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  color:#f0f9eeec;
+  margin-bottom: 1.5rem;
+}
+
+.button-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hero-button {
+  background-color: #38bdf8;
+  color: #020617;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: greenyellow;
+}
+
+.hero-button.outline {
+  background-color: #38bdf8;
+  border: 1px solid #38bdf8;
+  color: black;
+}
+
+.hero-button.outline:hover {
+  background-color: greenyellow;
+}
+
+.home-top-nav {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.home-top-item {
+}
+
+.nav-link-button {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #e5e7eb;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.nav-link-button:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+}
+
+.secondary-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
